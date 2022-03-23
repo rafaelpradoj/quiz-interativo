@@ -28,6 +28,8 @@
 
 <br>
 
+<h2>:link: Autor</h2>
+
 <h4>Rafael Prado de Jesus</h4>
 <p>
   <a href="https://www.linkedin.com/in/rafaelpradoj/" target="_blank">
