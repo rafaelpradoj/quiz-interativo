@@ -7,7 +7,7 @@
 </p>
 
 <p>
-  O objetivo do projeto foi criar um quiz de games, a cada resposta corret você ganha X pontos. Utilizei tecnologias como HTML, CSS, JavaScript e alguns Frameworks.
+  O objetivo do projeto foi criar um quiz de games, a cada resposta correta você ganha X pontos. Utilizei tecnologias como HTML, CSS, JavaScript e Bootstrap.
 </p>
 
 <br>
@@ -23,7 +23,6 @@
  <li>CSS</li>
  <li>JavaScript</li>
  <li>Bootstrap</li>
- <li>SweetAlert Library</li>
 </ul>
 
 <br>
