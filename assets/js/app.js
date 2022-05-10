@@ -1,15 +1,12 @@
 const form = document.querySelector('.quiz-form')
-const intro = document.querySelector('.intro')
-
-const h2 = document.createElement('h2')
+const finalResult = document.querySelector('.result')
 
 const correctAnswers = ['A', 'B', 'B', 'C']
 
-const showAnswersIntoQuiz = event => {
+const showScore = event => {
   event.preventDefault()
 
-  let points = 0
-
+  let score = 0
   const userAnswers = [
     event.target.inputQuestion1.value,
     event.target.inputQuestion2.value,
@@ -17,22 +14,35 @@ const showAnswersIntoQuiz = event => {
     event.target.inputQuestion4.value
   ]
 
-  const findCorrectAnswers = (userAnswer, index) => {
+  const checkCorrectAnswers = (userAnswer, index) => {
     const isCorrectAnswer = userAnswer === correctAnswers[index]
 
     if (isCorrectAnswer) {
-      points += 25
+      score += 25
     }
   }
-  const showFinalScore = () => {
-    h2.textContent = `Seu score final foi de ${points}%`
-    h2.classList.add('text-center', 'display-3', 'my-4',)
-    intro.insertAdjacentElement('afterend', h2)
-    scrollTo(0, 0)
-  }
 
-  userAnswers.forEach(findCorrectAnswers)
-  showFinalScore()
+  userAnswers.forEach(checkCorrectAnswers)
+
+  scrollTo(0, 0)
+
+  finalResult.classList.remove('d-none')
+
+  let counter = 0
+
+  const calculateFinalScore = () => {
+    const isFinalScore = counter === score
+    const span = finalResult.querySelector('span')
+
+    if (isFinalScore) {
+      clearInterval(timer)
+    }
+
+    span.textContent = `${counter}%`
+    counter++
+  }
+  
+  const timer = setInterval(calculateFinalScore, 10)
 }
 
-form.addEventListener('submit', showAnswersIntoQuiz)
+form.addEventListener('submit', showScore)

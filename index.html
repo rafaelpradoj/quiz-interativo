@@ -14,142 +14,152 @@
     <title>Quiz dos games</title>
   </head>
   <body>
-    <div class="intro py-3 bg-danger text-center">
+    <header class="intro py-3 bg-danger text-center">
       <div class="container">
         <h2 class="text-warning display-3 my-4">Quiz dos games</h2>
       </div>
-    </div>
+    </header>
+    <main>
+      <section class="result py-4 d-none bg-dark text-warning text-center">
+        <div class="container lead">
+          <p>
+            Você acertou
+            <span class="display-4 p-3">0%</span>
+            do quiz
+          </p>
+        </div>
+      </section>
+      <section class="quiz py-4 bg-dark">
+        <div class="container">
+          <h2 class="my-5 text-warning">
+            Esse é um quiz simples para você testar seu conhecimento sobre jogos
+            antigos do Super Nintendo!
+          </h2>
 
-    <div class="quiz py-4 bg-dark">
-      <div class="container">
-        <h2 class="my-5 text-warning">
-          Esse é um quiz simples para você testar seu conhecimento sobre jogos
-          antigos do Super Nintendo!
-        </h2>
+          <form class="quiz-form text-light">
+            <div class="my-5">
+              <p class="lead font-weight-normal text-warning text-warning">
+                1. A que jogo do Super Nintendo pertence esse personagem?
+              </p>
+              <img
+                src="assets/img/superMarioWorld.jpg"
+                class="img-thumbnail"
+                alt="Foto do Super Mario World"
+              />
+              <div class="form-check my-2 text-white-50">
+                <label class="form-check-label text-warning">
+                  <input type="radio" name="inputQuestion1" value="A" />
+                  Super Mario World
+                </label>
+              </div>
+              <div class="form-check my-2 text-white-50">
+                <label class="form-check-label text-warning">
+                  <input type="radio" name="inputQuestion1" value="B" checked />
+                  Super Mario 64
+                </label>
+              </div>
+              <div class="form-check my-2 text-white-50">
+                <label class="form-check-label text-warning">
+                  <input type="radio" name="inputQuestion1" value="C" />
+                  Super Mario Bros
+                </label>
+              </div>
+            </div>
 
-        <form class="quiz-form text-light">
-          <div class="my-5">
-            <p class="lead font-weight-normal text-warning text-warning">
-              1. A que jogo do Super Nintendo pertence esse personagem?
-            </p>
-            <img
-              src="assets/img/superMarioWorld.jpg"
-              class="img-thumbnail"
-              alt="Foto do Super Mario World"
-            />
-            <div class="form-check my-2 text-white-50">
-              <label class="form-check-label text-warning">
-                <input type="radio" name="inputQuestion1" value="A" checked />
-                Super Mario World
-              </label>
+            <div class="my-5">
+              <p class="lead font-weight-normal text-warning">
+                2. Nome do robô mais amado do Super Nintendo?
+              </p>
+              <img
+                src="assets/img/megamanX.png"
+                class="img-thumbnail"
+                alt="Foto do Megaman X"
+              />
+              <div class="form-check my-2 text-white-50">
+                <label class="form-check-label text-warning">
+                  <input type="radio" name="inputQuestion2" value="A" checked />
+                  Mega Man Super
+                </label>
+              </div>
+              <div class="form-check my-2 text-white-50">
+                <label class="form-check-label text-warning">
+                  <input type="radio" name="inputQuestion2" value="B" />
+                  Mega Man X
+                </label>
+              </div>
+              <div class="form-check my-2 text-white-50">
+                <label class="form-check-label text-warning">
+                  <input type="radio" name="inputQuestion2" value="C" />
+                  Mega Man Z
+                </label>
+              </div>
             </div>
-            <div class="form-check my-2 text-white-50">
-              <label class="form-check-label text-warning">
-                <input type="radio" name="inputQuestion1" value="B" />
-                Super Mario 64
-              </label>
-            </div>
-            <div class="form-check my-2 text-white-50">
-              <label class="form-check-label text-warning">
-                <input type="radio" name="inputQuestion1" value="C" />
-                Super Mario Bros
-              </label>
-            </div>
-          </div>
 
-          <div class="my-5">
-            <p class="lead font-weight-normal text-warning">
-              2. Nome do robô mais amado do Super Nintendo?
-            </p>
-            <img
-              src="assets/img/megamanX.png"
-              class="img-thumbnail"
-              alt="Foto do Megaman X"
-            />
-            <div class="form-check my-2 text-white-50">
-              <label class="form-check-label text-warning">
-                <input type="radio" name="inputQuestion2" value="A" checked />
-                Mega Man Super
-              </label>
+            <div class="my-5">
+              <p class="lead font-weight-normal text-warning">
+                3. De que jogo é esta cena?
+              </p>
+              <img
+                src="assets/img/maskara.png"
+                class="img-thumbnail"
+                alt="Foto do O Máskara"
+              />
+              <div class="form-check my-2 text-white-50">
+                <label class="form-check-label text-warning">
+                  <input type="radio" name="inputQuestion3" value="A" checked />
+                  Maskara
+                </label>
+              </div>
+              <div class="form-check my-2 text-white-50">
+                <label class="form-check-label text-warning">
+                  <input type="radio" name="inputQuestion3" value="B" />
+                  Mask
+                </label>
+              </div>
+              <div class="form-check my-2 text-white-50">
+                <label class="form-check-label text-warning">
+                  <input type="radio" name="inputQuestion3" value="C" />
+                  O Fabuloso Mask
+                </label>
+              </div>
             </div>
-            <div class="form-check my-2 text-white-50">
-              <label class="form-check-label text-warning">
-                <input type="radio" name="inputQuestion2" value="B" />
-                Mega Man X
-              </label>
-            </div>
-            <div class="form-check my-2 text-white-50">
-              <label class="form-check-label text-warning">
-                <input type="radio" name="inputQuestion2" value="C" />
-                Mega Man Z
-              </label>
-            </div>
-          </div>
 
-          <div class="my-5">
-            <p class="lead font-weight-normal text-warning">
-              3. De que jogo é esta cena?
-            </p>
-            <img
-              src="assets/img/maskara.png"
-              class="img-thumbnail"
-              alt="Foto do O Máskara"
-            />
-            <div class="form-check my-2 text-white-50">
-              <label class="form-check-label text-warning">
-                <input type="radio" name="inputQuestion3" value="A" checked />
-                Maskara
-              </label>
+            <div class="my-5">
+              <p class="lead font-weight-normal text-warning">
+                4. Qual o ano de criação deste jogo?
+              </p>
+              <img
+                src="assets/img/superMarioBros.png"
+                class="img-thumbnail"
+                alt="Foto do Super Mario Bros"
+              />
+              <div class="form-check my-2 text-white-50">
+                <label class="form-check-label text-warning">
+                  <input type="radio" name="inputQuestion4" value="A" checked />
+                  1986
+                </label>
+              </div>
+              <div class="form-check my-2 text-white-50">
+                <label class="form-check-label text-warning">
+                  <input type="radio" name="inputQuestion4" value="B" />
+                  1990
+                </label>
+              </div>
+              <div class="form-check my-2 text-white-50">
+                <label class="form-check-label text-warning">
+                  <input type="radio" name="inputQuestion4" value="C" />
+                  1985
+                </label>
+              </div>
             </div>
-            <div class="form-check my-2 text-white-50">
-              <label class="form-check-label text-warning">
-                <input type="radio" name="inputQuestion3" value="B" />
-                Mask
-              </label>
-            </div>
-            <div class="form-check my-2 text-white-50">
-              <label class="form-check-label text-warning">
-                <input type="radio" name="inputQuestion3" value="C" />
-                O Fabuloso Mask
-              </label>
-            </div>
-          </div>
 
-          <div class="my-5">
-            <p class="lead font-weight-normal text-warning">
-              4. Qual o ano de criação deste jogo?
-            </p>
-            <img
-              src="assets/img/superMarioBros.png"
-              class="img-thumbnail"
-              alt="Foto do Super Mario Bros"
-            />
-            <div class="form-check my-2 text-white-50">
-              <label class="form-check-label text-warning">
-                <input type="radio" name="inputQuestion4" value="A" checked />
-                1986
-              </label>
+            <div class="text-center">
+              <button class="btn bg-danger text-warning">Enviar</button>
             </div>
-            <div class="form-check my-2 text-white-50">
-              <label class="form-check-label text-warning">
-                <input type="radio" name="inputQuestion4" value="B" />
-                1990
-              </label>
-            </div>
-            <div class="form-check my-2 text-white-50">
-              <label class="form-check-label text-warning">
-                <input type="radio" name="inputQuestion4" value="C" />
-                1985
-              </label>
-            </div>
-          </div>
-
-          <div class="text-center">
-            <button class="btn bg-danger text-warning">Enviar</button>
-          </div>
-        </form>
-      </div>
-    </div>
+          </form>
+        </div>
+      </section>
+    </main>
     <script src="assets/js/app.js"></script>
   </body>
 </html>
