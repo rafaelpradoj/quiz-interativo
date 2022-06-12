@@ -7,7 +7,7 @@
 </p>
 
 <p>
-  O objetivo do projeto foi criar um quiz de games, a cada resposta correta você ganha X pontos. Utilizei tecnologias como HTML, CSS, JavaScript e Bootstrap.
+  O objetivo do projeto foi criar um quiz de games, a cada resposta correta você ganha X pontos.
 </p>
 
 <br>
