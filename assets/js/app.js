@@ -1,48 +1,61 @@
 const form = document.querySelector('.quiz-form')
-const finalResult = document.querySelector('.result')
+const finalResultContainer = document.querySelector('.final-result-container')
 
 const correctAnswers = ['A', 'B', 'B', 'C']
 
-const showScore = event => {
-  event.preventDefault()
+let score = 0
 
-  let score = 0
-  const userAnswers = [
-    event.target.inputQuestion1.value,
-    event.target.inputQuestion2.value,
-    event.target.inputQuestion3.value,
-    event.target.inputQuestion4.value
-  ]
+const getUserAnswers = () => {
+  
+  let userAnswers = []
 
-  const checkCorrectAnswers = (userAnswer, index) => {
-    const isCorrectAnswer = userAnswer === correctAnswers[index]
+  correctAnswers.forEach((_, index) => {
+    const userAnswer = form[`inputQuestion${index + 1}`].value
+    userAnswers.push(userAnswer)
+  })
 
-    if (isCorrectAnswer) {
+  return userAnswers
+}
+
+const calculateResult = userAnswers => {
+  userAnswers.forEach((userAnswer, index) => {
+    const isUserAnswerCorrect = correctAnswers[index] === userAnswer
+
+    if (isUserAnswerCorrect) {
       score += 25
     }
-  }
+  })
+}
 
-  userAnswers.forEach(checkCorrectAnswers)
+const showFinalResult = () => {
+  finalResultContainer.classList.remove('d-none')
+  scrollTo({
+    top: 0,
+    left: 0,
+    behavior: 'smooth'
+  })
+}
 
-  scrollTo(0, 0)
-
-  finalResult.classList.remove('d-none')
-
+const animateFinalResult = () => {
   let counter = 0
 
-  const calculateFinalScore = () => {
-    const isFinalScore = counter === score
-    const span = finalResult.querySelector('span')
-
-    if (isFinalScore) {
+  const timer = setInterval(() => {
+    if (counter === score) {
       clearInterval(timer)
     }
 
-    span.textContent = `${counter}%`
-    counter++
-  }
-  
-  const timer = setInterval(calculateFinalScore, 10)
+    finalResultContainer.querySelector('span').textContent = `${counter++}%`
+  }, 10)
 }
 
-form.addEventListener('submit', showScore)
+form.addEventListener('submit', event => {
+  event.preventDefault()
+  
+  score = 0
+  
+  const userAnswers = getUserAnswers()
+
+  calculateResult(userAnswers)
+  showFinalResult()
+  animateFinalResult()
+})
